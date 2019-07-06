@@ -2,7 +2,7 @@
 #define NODE_H
 
 #include <vector>
-
+#include "btree.h"
 using namespace std;
 
 template <typename T>
@@ -22,7 +22,7 @@ class Node {
          * An alternative is to create two different nodes (Internal and Leaf) that inherite from Node 
          * an implement this function
          */
-        //virtual bool isLeaf() = 0;
+
 
     friend class BTree; 
 };
