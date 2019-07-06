@@ -14,7 +14,7 @@ I dont know if the - [x] are really working,but i try my best.
 - [x] Search
 - [ ] Insert
 - [ ] Delete
-- [ ] Print
+- [x] Print
 
 ## Author
 - Antonio Toche
