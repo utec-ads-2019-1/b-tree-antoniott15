@@ -9,7 +9,7 @@ g++ -std=c++17 main.cpp
 ```
 
 ## TODO
-I dont know if the [x] are really working,but i try my best.
+I dont know if the - [x] are really working,but i try my best.
 - [x] Constructor
 - [x] Search
 - [ ] Insert
