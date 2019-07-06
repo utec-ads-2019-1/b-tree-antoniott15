@@ -62,7 +62,7 @@ public:
         }
     }
 
-    void *Node<T>::insertEmpty(int k){
+    void *Node<T>::insertNotEmpty(int k){
         int i = size - 1;
         if(isLeaf){
             while (i >= 0 && keys.at(i) > k)
@@ -78,10 +78,10 @@ public:
                 i--;
             }
             if(childs[i+1]->size == 2*degree-1){
-                Node<T> *newNode = new Node<T>(child.at(i + 1)->degree, child.at(i + 1)->isLeaf)
+                Node<T> *newNode = new Node<T>(childs.at(i + 1)->degree, childs.at(i + 1)->isLeaf)
                 newNode->size = degree - 1;
                 for(int i = 0;j<degree-1;i++){
-                    newNode->keys[i] = child.at(i+1)->child.at(i+degree);
+                    newNode->keys[i] = childs.at(i+1)->childs.at(i+degree);
                 }
             }
         }
@@ -92,20 +92,27 @@ public:
             {
                 for (int i = 0; i < size; i++)
                 {
-                    cout << keys[i] << " ";
+                    cout << keys[i] << "\t";
                 }
             }
             else
             {
                 for (int i = 0; i < size; i++)
                 {
-                    children[i]->print();
-                    cout << keys[i] << " ";
+                    childs[i]->print();
+                    cout << keys[i] << "\t";
                 }
-                children[size]->print();
+                childs[size]->print();
             }
         }
-    
+    void print(){
+        if (root)
+        {
+            root->print();
+        }
+        cout << "\n";
+        
+    }
 };
 
 #endif
