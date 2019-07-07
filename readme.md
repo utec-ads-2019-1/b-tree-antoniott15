@@ -9,10 +9,11 @@ g++ -std=c++17 main.cpp
 ```
 
 ## TODO
-I dont know if the - [x] are really working,but i try my best.
+Segmentation fault in insertion.
+
 - [x] Constructor
 - [x] Search
-- [ ] Insert
+- [x] Insert
 - [ ] Delete
 - [x] Print
 
