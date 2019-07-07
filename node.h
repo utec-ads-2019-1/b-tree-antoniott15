@@ -80,7 +80,7 @@ class Node {
                 newNode->keys[i] = valueTo->keys[i + degree];
             }
 
-            if (valueTo->isLeaf == false)
+            if (!valueTo->isLeaf)
             {
                 for (int i = 0; i < degree; i++)
                     valueTo->childs[i] = valueTo->childs[i + degree];
